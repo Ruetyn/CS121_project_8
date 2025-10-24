@@ -29,22 +29,31 @@ while(keepGoing)
 ## computer guessing
 void computerGuesser()
 ```
-Make an integer variable called guess and set it to 50
-Make an integer that will change guess and set it to 25, named changeGuess
-Make a boolean keepGoing to contorl the while loop
+Make an integer called upper and set it to 100
+Make an integer called lower and set it to 1
+Make an integer variable called guess and set it mean(lower, upper)
+Make a boolean keepGoing to control the while loop
 Make an integer to keep track of the number of turns, named turns
+Make an empty string to contain the user status
 while(keepGoing)
+  turns++
   print turn + ") I guess" + guess
   print "Too (H)igh, too (L)ow, or (C)orrect?"
   Use system.in to take in a user input, named status
   if status == H
+    upper=guess
     guess=guess-changeGuess
   else if status == L
-    guess=guess+changeGuess
+    lower = guess
+    guess= getMean(lower, upper)
   else
     Make keepGoing false to end the loop
-  while changeGuess >= 1
-    Use math.floor to always round down changeGuess=changeGuess*0.5
+```
+## mean
+int getMean(int lower, int upper)
+```
+Use lower and up to cast the mean as an integer
+return the mean
 ```
 
 ## main
